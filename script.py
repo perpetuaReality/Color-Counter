@@ -5,7 +5,7 @@ from PIL import Image
 FILES_LOCATION = "" # Location of files to scan.
 EXCLUSION_LIST = [] # Directory names to exclude.
 VALID_FILE_EXTENSIONS = [".png", ".gif", ".jpg", ".jpeg", ".bmp"] # Extensions of files to include.
-OUTPUT_FILE = "colors.txt" # Where to output final tally.
+OUTPUT_FILE = "colors.csv" # Where to output final tally.
 
 fileList = []
 
@@ -49,5 +49,6 @@ for file in set(fileList):
 orderedCounts = dict(sorted(colorCounts.items(), key=lambda item: item[1], reverse=True))
 
 with open(OUTPUT_FILE, 'w') as f:
+    print('color, count', file=f)
     for color, count in orderedCounts.items():
-        print(f'{color} appears {count} times', file=f)
+        print(f'{color}, {count}', file=f)
