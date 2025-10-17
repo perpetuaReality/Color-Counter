@@ -2,7 +2,7 @@ import os
 import numpy as np
 from PIL import Image
 
-FILES_LOCATION = "C:/Users/13per/Desktop/UT dump" # Location of files to scan.
+FILES_LOCATION = "" # Location of files to scan.
 EXCLUSION_LIST = [] # Directory names to exclude.
 VALID_FILE_EXTENSIONS = [".png", ".gif", ".jpg", ".jpeg", ".bmp"] # Extensions of files to include.
 OUTPUT_FILE = "colors.txt" # Where to output final tally.
